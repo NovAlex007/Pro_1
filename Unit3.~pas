@@ -1,0 +1,70 @@
+unit Unit3;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TForm3 = class(TForm)
+    Button1: TButton;
+    Memo1: TMemo;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+type
+  mas_buf = array[0..9] of byte;
+
+var
+  Form3: TForm3;
+
+implementation
+
+{$R *.dfm}
+
+function s_buf(buf : mas_buf):string;
+var
+  s : string;
+  i : integer;
+begin
+  s := '';
+  for i:=0 to 9 do begin
+    s := s + inttostr(buf[i]) + ', ';
+  end;
+  Result := s;
+end;
+
+procedure TForm3.Button1Click(Sender: TObject);
+var
+  buf : mas_buf;
+  s : string;
+begin
+  with TFileStream.create('c:\my.txt', fmOpenRead) do
+  try
+    Seek(0,soFromBeginning);
+    Read(buf,10);
+    s := s_buf(buf);
+    Form3.Memo1.Lines.Add(s);
+    Seek(10,soFromCurrent);
+    Read(buf,10);
+    s := s_buf(buf);
+    Form3.Memo1.Lines.Add(s);
+    Seek(20,soFromCurrent);
+    Read(buf,10);
+    s := s_buf(buf);
+    Form3.Memo1.Lines.Add(s);
+    Seek(30,soFromCurrent);
+    Read(buf,10);
+    s := s_buf(buf);
+    Form3.Memo1.Lines.Add(s);
+  finally
+    free;
+  end;
+end;
+
+end.
