@@ -89,6 +89,15 @@ object Form1: TForm1
       'Memo3')
     TabOrder = 3
   end
+  object Button2: TButton
+    Left = 400
+    Top = 8
+    Width = 97
+    Height = 33
+    Caption = #1054#1095#1080#1089#1090#1080#1090#1100' '#1087#1086#1083#1103
+    TabOrder = 4
+    OnClick = Button2Click
+  end
   object OpenDialog1: TOpenDialog
     Filter = #1060#1072#1081#1083'|*.txt'
     Left = 65528

@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 245
-  Top = 132
+  Left = 265
+  Top = 146
   Width = 521
   Height = 449
   Caption = 'Form1'
@@ -49,6 +49,19 @@ object Form1: TForm1
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -16
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 400
+    Top = 56
+    Width = 58
+    Height = 24
+    Caption = #1058#1077#1089#1090'!!!'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
     Font.Name = 'MS Sans Serif'
     Font.Style = []
     ParentFont = False
