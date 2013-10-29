@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 245
-  Top = 132
+  Left = 464
+  Top = 129
   Width = 521
   Height = 449
   Caption = 'Form1'
@@ -111,6 +111,16 @@ object Form1: TForm1
     object Stream1: TMenuItem
       Caption = #1063#1090#1077#1085#1080#1077' '#1092#1072#1081#1083#1072' Stream'
       OnClick = Stream1Click
+    end
+    object N2: TMenuItem
+      Caption = #1058#1077#1089#1090
+      object N11: TMenuItem
+        Caption = #1058#1077#1089#1090'_1'
+        OnClick = N11Click
+      end
+      object N21: TMenuItem
+        Caption = #1058#1077#1089#1090'_2'
+      end
     end
   end
 end

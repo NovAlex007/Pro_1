@@ -20,12 +20,16 @@ type
     Label3: TLabel;
     Stream1: TMenuItem;
     Button2: TButton;
+    N2: TMenuItem;
+    N11: TMenuItem;
+    N21: TMenuItem;
     procedure Button1Click(Sender: TObject);
 //    procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
     procedure N1Click(Sender: TObject);
     procedure Stream1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
+    procedure N11Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -46,7 +50,7 @@ var
   pytch : string[50];
 implementation
 
-uses Unit2, Unit3;
+uses Unit2, Unit3, Unit4;
 
 {$R *.dfm}
 
@@ -134,6 +138,11 @@ procedure TForm1.Button2Click(Sender: TObject);
 begin
 Form1.Memo1.Clear;
 Form1.Memo3.Clear;
+end;
+
+procedure TForm1.N11Click(Sender: TObject);
+begin
+ Form4.show;
 end;
 
 end.
